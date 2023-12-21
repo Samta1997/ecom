@@ -2,11 +2,11 @@ import { createContext, useContext, useReducer, useEffect } from "react";
 import reducer from "../reducer/cartReducer";
 
 const CartContext = createContext();
-
+let a=[];
 
 const getLocalCartData=()=>{
   let localCartData=localStorage.getItem("dcart");
-  if(localCartData===[]){
+  if(localCartData === a){
     return [];
   }
   else{
